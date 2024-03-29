@@ -12,7 +12,7 @@ export const App = () => {
       <h1>Project Marvel</h1>
         <BrowserRouter>
           <Routes>
-            <Route path='/' element={<Main url={url}/>}/>
+            <Route path='/' element={<Main />}/>
             <Route path='/detail/:id' element={<Detail />}/>
           </Routes>
         </BrowserRouter>
