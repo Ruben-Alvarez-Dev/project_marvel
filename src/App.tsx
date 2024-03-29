@@ -1,16 +1,21 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Main } from './components/main';
+import { Detail } from './components/detail';
 import './App.css'
 
-function App() {
-  const [count, setCount] = useState(0)
-
+export const App = () => {
+  
+  const url = import.meta.env.VITE_BASE_URL;
+  
   return (
     <>
-    <h1>Project Marvel</h1>
+      <h1>Project Marvel</h1>
+        <BrowserRouter>
+          <Routes>
+            <Route path='/' element={<Main url={url}/>}/>
+            <Route path='/detail/:id' element={<Detail />}/>
+          </Routes>
+        </BrowserRouter>
     </>
   )
 }
-
-export default App
