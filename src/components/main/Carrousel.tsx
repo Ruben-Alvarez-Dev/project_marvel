@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Container } from '../styled.components'
+import { Container, AvatarContainer, Avatar } from '../styled.components'
 
 interface Movie {
   name: string;
@@ -17,7 +17,7 @@ interface Item {
 
 }
 
-export const Carrousel = () => {
+export const Carrousel = (): JSX.Element => {
 
   const [data, setData] = useState<Movie[]>([]);
 

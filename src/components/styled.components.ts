@@ -23,3 +23,20 @@ export const Container = styled.div<Props>`
     opacity: 0.5;
 
 `
+
+export const AvatarContainer = styled.div<Props>`
+    width: 100%;
+    height: ${prps => props.height}vh;
+    position: absolute;
+    top: 0;
+    margin: auto;
+`
+
+export const Avatar = styled.div<Props>`
+    width: auto;
+    height: ${props => props.height}vh;
+    background: url(${props => props.src}) no-repeat;
+    background-position: top;
+    background-size: cover;
+
+`
