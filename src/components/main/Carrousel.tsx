@@ -35,15 +35,19 @@ export const Carrousel = (): JSX.Element => {
   return (
     <>
       {
-        data.length > 0 && 
-          <>
-            <Container height={50} src={data[1].thumbnail}></Container>
-              <AvatarContainer height={50}>
-                <Avatar height={50} src={Ironman}></Avatar>
-                <Degrade height={50}></Degrade>
-              </AvatarContainer>
-            
-          </>
+        data.length > 0 
+          ? 
+            <>
+              <Container height={50} src={data[1].thumbnail}></Container>
+                <AvatarContainer height={50}>
+                  <Avatar height={50} src={Ironman}></Avatar>
+                  <Degrade height={50}></Degrade>
+                </AvatarContainer>
+            </>
+          :
+            <section className="loading">
+              Loading...
+            </section>
       }
     </>
 

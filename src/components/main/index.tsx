@@ -4,11 +4,8 @@ import { Info } from './Info';
 
 export const Main = () => {
     
-    const theme = {
-        primary: true,
-        
-    }   
-
+    
+    
     return (
         <>
             <Flex>

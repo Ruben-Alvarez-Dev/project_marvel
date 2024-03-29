@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import { Main } from './components/main';
 import { Detail } from './components/detail';
+import { AppProvider } from './context/AppProvider';
 
 export const App = () => {
   
@@ -9,10 +10,13 @@ export const App = () => {
   return (
     <>
         <BrowserRouter>
-          <Routes>
-            <Route path='/' element={<Main />}/>
-            <Route path='/detail/:id' element={<Detail />}/>
-          </Routes>
+          <AppProvider>
+            <Routes>
+              <Route path='/' element={<Main />}/>
+              <Route path='/detail/:id' element={<Detail />}/>
+            </Routes>
+          </AppProvider>
+        
         </BrowserRouter>
     </>
   )

@@ -1,13 +1,18 @@
 import { FaRegPlayCircle, FaStar } from 'react-icons/fa';
 import { ContainerInfo, MiniAvatar, ButtonBuy } from '../styled.components';
+import { useContext } from 'react';
+import { Context } from '../../context/AppContext';
 import { useNavigate } from 'react-router-dom';
 import Ironman from '../../assets/ironman.png';
+
+
 
 
 
 export const Info = () => {
   
   const history = useNavigate();
+  const { state } = useContext(Context);
   const goToDetails = (): void => {
     history('/details/2');
   }
@@ -19,7 +24,7 @@ export const Info = () => {
             <FaRegPlayCircle size={25} color={"red"}/>
           </section>
           <section className="title-info">
-            Ironman
+            { state.name}
           </section>
           <section className="details-info">
             <section className="list-info">
