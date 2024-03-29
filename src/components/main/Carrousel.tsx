@@ -1,13 +1,44 @@
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 import { Container } from '../styled.components'
+
+interface Movie {
+  name: string;
+  description: string;
+  thumbnail: string;
+}
+
+interface Item {
+  name: string;
+  description: string;
+  thumbnail: {
+    path: string;
+    extension: string;
+  }
+
+}
 
 export const Carrousel = () => {
 
-  const getData = async () => {
+  const [data, setData] = useState<Movie[]>([]);
+
+
+  const getData = async (): Promise<void> => {
     const url = import.meta.env.VITE_BASE_URL;
     const items = await fetch (url);
-    const response = await items.json();
-    console.log(response);
+    const response: any = await items.json();
+    const aItems = response.data.results.map((item: Item) => {
+      const obj: Movie = {
+        name: item.name,
+        description: item.description,
+        thumbnail: `${item.thumbnail.path}.${item.thumbnail.extension}`
+      };
+      return obj; 
+    })
+
+    console.log(aItems);
+    setData(aItems);
+    
+    
   }
 
   useEffect(() => {
@@ -17,9 +48,12 @@ export const Carrousel = () => {
 
   return (
     <>
-      <Container height={50}>
-        Carrousel
-      </Container>
+      {
+        data.length > 0 && 
+          <Container height={50} src={data[10].thumbnail}>
+            Carrousel
+          </Container>
+      }
     </>
 
   )

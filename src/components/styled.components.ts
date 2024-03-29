@@ -2,6 +2,7 @@ import styled from 'styled-components';
 
 interface Props {
     height?: number;
+    src?: string;
 }
 
 export const Flex = styled.div<Props>`
@@ -13,6 +14,12 @@ export const Flex = styled.div<Props>`
 
 export const Container = styled.div<Props>`
     height: ${props => props.height}vh;
-    width: 100%;
-    background: red;
+    width: 90%;
+    margin-top: 50px;
+    border-radius: 10px 10px 0 0;
+    background: url(${props => props.src}) no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 0.5;
+
 `
