@@ -1,6 +1,8 @@
-import { FaRegPlayCircle } from 'react-icons/fa';
-import { FaStar } from 'react-icons/fa';
-import { ContainerInfo } from '../styled.components';
+import { FaRegPlayCircle, FaStar } from 'react-icons/fa';
+import { ContainerInfo, MiniAvatar, ButtonBuy } from '../styled.components';
+import Ironman from '../../assets/ironman.png';
+
+
 
 export const Info = () => {
   return (
@@ -33,6 +35,18 @@ export const Info = () => {
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem ab voluptate dolor vel architecto laboriosam dolorem aliquid similique distinctio nihil, ea impedit nulla totam quaerat, hic officiis molestiae dicta asperiores!
               </div>  
             </section>
+            <section className="description">
+              <div className="description-title">Cast</div>
+              <div className="images">
+                {
+                  [1, 2, 3, 4].map(item => <MiniAvatar key={item} src={Ironman}/> )
+                }
+              </div>
+            </section>
+          </section>
+          
+          <section className="button-buy">
+            <ButtonBuy>Buy Ticket</ButtonBuy>
           </section>
         </ContainerInfo>
     </>

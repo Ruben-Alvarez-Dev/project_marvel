@@ -38,6 +38,15 @@ export const AvatarContainer = styled.div<Props>`
     margin: auto;
     background: red;
 `
+export const MiniAvatar = styled.div<Props>`
+    width: 50px;
+    height: 50px;
+    background: url(${props => props.src}) no-repeat;
+    background-size: cover;
+    background-position: top;
+    border-radius: 50%;
+    border: 2px solid white;
+`
 export const Degrade = styled.div<Props>`
     width: 100%;
     height: ${props => props.height}vh;
@@ -54,5 +63,18 @@ export const Avatar = styled.div<Props>`
     background: url(${props => props.src}) no-repeat;
     background-position: top;
     background-size: cover;
+
+`
+
+export const ButtonBuy = styled.button<Props>`
+    width: 80%;
+    margin: auto;
+    background: red;
+    border: none;
+    color: white;
+    padding: 5px;
+    margin-top: 15px;
+    border-radius: 7px;
+    cursor: pointer;
 
 `

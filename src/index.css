@@ -61,9 +61,27 @@ body, html {
 }
 .description-title{
   font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 5px;
 }
 .desc{
   color: #c6c6c6;
   font-size: 10px;
   text-align: left;
+}
+.images{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around;
+}
+.button-buy{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  cursor: pointer;
+
 }
