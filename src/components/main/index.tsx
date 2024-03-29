@@ -1,9 +1,20 @@
-import { Button } from '../styled.components';
+import { Flex } from '../styled.components';
+import { Carrousel } from './Carrousel';
+import { Info } from './Info';
 
 export const Main = () => {
+    
+    const theme = {
+        primary: true,
+        
+    }   
+
     return (
         <>
-            <Button primary>Hola</Button>
+            <Flex>
+                <Carrousel />
+                <Info />
+            </Flex>
         </>
     );
 } 

@@ -1,15 +1,18 @@
 import styled from 'styled-components';
 
 interface Props {
-    primary: boolean;
+    height?: number;
 }
 
-export const Button = styled.button<Props>`
-    color: whote;
-    border: 1px solid white;
-    padding: 10px;
-    border-radius: 10px;
-    ${props => props.primary 
-        ? 'background: green;' 
-        : 'background: red;'}
+export const Flex = styled.div<Props>`
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+`
+
+export const Container = styled.div<Props>`
+    height: ${props => props.height}vh;
+    width: 100%;
+    background: red;
 `
