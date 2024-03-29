@@ -1,12 +1,7 @@
-interface Props {
-    url: string;
-}
-
-export const Main = ({url}: Props) => {
+export const Main = () => {
     return (
         <div>
-        <h1>Main</h1>
-        {url}
+            <h1>Main</h1>
         </div>
     );
 } 
