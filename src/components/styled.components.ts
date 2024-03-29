@@ -23,6 +23,12 @@ export const Container = styled.div<Props>`
     opacity: 0.5;
 
 `
+export const ContainerInfo = styled.div<Props>`
+    height: ${props => props.height}vh;
+    width: 100%;
+    color: white;
+    background: black;
+`
 
 export const AvatarContainer = styled.div<Props>`
     width: 100%;
