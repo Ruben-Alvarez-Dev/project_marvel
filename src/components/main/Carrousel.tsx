@@ -1,22 +1,7 @@
 import { useState, useEffect } from 'react'
 import { Container, AvatarContainer, Avatar, Degrade } from '../styled.components'
 import Ironman from '../../assets/ironman.png'
-
-interface Movie {
-  name: string;
-  description: string;
-  thumbnail: string;
-}
-
-interface Item {
-  name: string;
-  description: string;
-  thumbnail: {
-    path: string;
-    extension: string;
-  }
-
-}
+import { Movie, Item } from '../../interfaces/interfaces'
 
 export const Carrousel = (): JSX.Element => {
 

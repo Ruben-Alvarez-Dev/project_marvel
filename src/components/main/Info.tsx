@@ -1,10 +1,17 @@
 import { FaRegPlayCircle, FaStar } from 'react-icons/fa';
 import { ContainerInfo, MiniAvatar, ButtonBuy } from '../styled.components';
+import { useNavigate } from 'react-router-dom';
 import Ironman from '../../assets/ironman.png';
 
 
 
 export const Info = () => {
+  
+  const history = useNavigate();
+  const goToDetails = (): void => {
+    history('/details/2');
+  }
+
   return (
     <>
         <ContainerInfo height={50}>
@@ -46,7 +53,7 @@ export const Info = () => {
           </section>
           
           <section className="button-buy">
-            <ButtonBuy>Buy Ticket</ButtonBuy>
+            <ButtonBuy onClick={goToDetails}>Buy Ticket</ButtonBuy>
           </section>
         </ContainerInfo>
     </>
