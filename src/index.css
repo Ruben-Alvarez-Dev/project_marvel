@@ -33,3 +33,16 @@ body, html {
   font-size: 28px;
   text-align: center;
 }
+.details-info{
+  width: 100%;
+  
+}
+.list-info{
+  display: flex;
+  margin: auto;
+  flex-direction: row;
+  align-items : center;
+  justify-content: space-around;
+  font-size: 13px;
+  width: 50%;
+}

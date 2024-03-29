@@ -11,6 +11,13 @@ export const Info = () => {
           <section className="title-info">
             Ironman
           </section>
+          <section className="details-info">
+            <section className="list-info">
+              <div>2020</div>
+              <div>Fantastic</div>
+              <div>2h 35min</div>
+            </section>
+          </section>
         </ContainerInfo>
     </>
   )
