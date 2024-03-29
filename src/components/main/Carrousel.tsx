@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
-import { Container, AvatarContainer, Avatar } from '../styled.components'
+import { Container, AvatarContainer, Avatar, Degrade } from '../styled.components'
+import Ironman from '../../assets/ironman.png'
 
 interface Movie {
   name: string;
@@ -50,9 +51,14 @@ export const Carrousel = (): JSX.Element => {
     <>
       {
         data.length > 0 && 
-          <Container height={50} src={data[10].thumbnail}>
-            Carrousel
-          </Container>
+          <>
+            <Container height={50} src={data[1].thumbnail}></Container>
+              <AvatarContainer height={50}>
+                <Avatar height={50} src={Ironman}></Avatar>
+                <Degrade height={50}></Degrade>
+              </AvatarContainer>
+            
+          </>
       }
     </>
 

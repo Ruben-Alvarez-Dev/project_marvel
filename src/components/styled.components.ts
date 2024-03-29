@@ -13,7 +13,7 @@ export const Flex = styled.div<Props>`
 `
 
 export const Container = styled.div<Props>`
-    height: ${props => props.height}vh;
+    height: calc(${props => props.height}vh - 50px);
     width: 90%;
     margin-top: 50px;
     border-radius: 10px 10px 0 0;
@@ -26,10 +26,20 @@ export const Container = styled.div<Props>`
 
 export const AvatarContainer = styled.div<Props>`
     width: 100%;
-    height: ${prps => props.height}vh;
+    height: ${props => props.height}vh;
     position: absolute;
-    top: 0;
+    top: 0; 
     margin: auto;
+    background: red;
+`
+export const Degrade = styled.div<Props>`
+    width: 100%;
+    height: ${props => props.height}vh;
+    position: absolute;
+    top: 0; 
+    z-index: 2;
+    margin: auto;
+    background: linear-gradient(transparent 0, #000 90%);
 `
 
 export const Avatar = styled.div<Props>`
